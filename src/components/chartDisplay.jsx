@@ -35,11 +35,14 @@ const ChartDisplay = ({ dataAPI }) => {
         yAxisID: "y",
         data: dataAPI.map((item) => item.amount),
         // backgroundColor: ["red", "red", "red", "blue", "red", "red", "red"],
-        backgroundColor: days.map((x, index) =>
-          index === day - 1 ? "HSL(186, 34%, 60%)" : "hsl(10, 79%, 65%)"
-        ),
+        backgroundColor: days.map((x, index) => {
+          // console.log(day, index + 1, (index + 1) % 7);
+          return (index + 1) % 7 === day
+            ? "HSL(186, 34%, 60%)"
+            : "hsl(10, 79%, 65%)";
+        }),
         hoverBackgroundColor: days.map((x, index) =>
-          index === day - 1 ? "HSL(186, 15%, 60%)" : "hsl(10, 45%, 65%)"
+          (index + 1) % 7 === day ? "HSL(186, 15%, 60%)" : "hsl(10, 45%, 65%)"
         ),
       },
     ],
