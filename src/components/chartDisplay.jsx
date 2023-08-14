@@ -51,6 +51,11 @@ const ChartDisplay = ({ dataAPI }) => {
   const options = {
     responsive: true,
     maintainAspectRatio: false,
+    elements: {
+      bar: {
+        borderRadius: "5",
+      },
+    },
     plugins: {
       tooltip: {
         // enabled: false,

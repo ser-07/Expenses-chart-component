@@ -22,7 +22,9 @@ body{
   /* border: 2px solid green; */
   border-radius: 10px;
   justify-content: space-between;
-  padding: 10px;
+  align-items: center;
+  padding: 15px;
+  height: 70px;
 
   /* background-color: HSL(186, 34%, 60%); */
 }
@@ -33,7 +35,8 @@ body{
   background-color: white;
   border-radius: 10px;
   margin-top: 15px;
-  padding: 10px;
+  padding: 20px;
+ 
 }
 
 .App .card-head .card-head-left{
@@ -59,14 +62,63 @@ body{
 .card-body .card-body-bottom{
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid rgb(185, 183, 183);
+  padding: 0px  10px ;
+  /* font-size: 10px; */
+  height: 100px;
+  align-items: center;
 }
 
 .card-body .card-body-bottom .card-body-bottom-left{
   display: flex;
   flex-direction: column;
+  /* border: 1px solid grey; */
+  /* margin: 0; */
+  height: 60px;
+  /* justify-content: space-between; */
+  justify-content: center;
 }
+
+.card-body .card-body-bottom .card-body-bottom-left p{
+  /* border: 2px solid yellow; */
+  margin: 0;
+}
+
 
 .card-body .card-body-bottom .card-body-bottom-right{
   display: flex;
   flex-direction: column;
+  height: 40px;
+  justify-content: space-between;
+  
+}
+
+.card-body .card-body-bottom .card-body-bottom-right p{
+  /* border: 2px solid yellow; */
+  margin: 0;
+}
+
+.btm-txt{
+  color: grey;
+  font-size: 13px;
+}
+
+.btm-dl{
+  font-size: 35px;
+}
+
+@media(max-width: 375px){
+  .App{
+   /* background-color: red; */
+    width: 300px;
+  }
+
+}
+
+@media(max-width: 475px){
+  .App{
+   /* background-color: red; */
+    width: 380px;
+  }
+
 }

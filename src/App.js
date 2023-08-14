@@ -23,16 +23,21 @@ function App() {
         <ChartDisplay dataAPI={dataAPI} />
         <div className="card-body-bottom">
           <div className="card-body-bottom-left">
-            <p>Total this month</p>
-            <p>
-              {dataAPI
-                .map((item) => item.amount)
-                .reduce((tot, cur) => tot + cur) * 4}
+            <p className="btm-txt">Total this month</p>
+            <p className="btm-dl">
+              <b>
+                $
+                {dataAPI
+                  .map((item) => item.amount)
+                  .reduce((tot, cur) => tot + cur) * 4}
+              </b>{" "}
             </p>
           </div>
           <div className="card-body-bottom-right">
-            <p>+2.4%</p>
-            <p>from last month</p>
+            <p>
+              <b>+2.4%</b>
+            </p>
+            <p className="btm-txt">from last month</p>
           </div>
         </div>
       </div>
